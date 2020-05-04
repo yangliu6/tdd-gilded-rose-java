@@ -30,7 +30,7 @@ public abstract class Commodity {
         return this.Quality;
     }
 
-    //计算quality值
+    //计算quality值,sellIn和quality表述初始的值，day表示过了多少天
     public abstract int calculateQuality(int day,int sellIn,int quality);
 
 }
