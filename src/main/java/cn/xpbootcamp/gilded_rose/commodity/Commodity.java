@@ -1,7 +1,7 @@
 package cn.xpbootcamp.gilded_rose.commodity;
 
 //定义商品类
-public class Commodity {
+public abstract class Commodity {
     private int SellIn;//商品距离保质期的距离
     private int Quality;//商品价值
 
@@ -30,13 +30,7 @@ public class Commodity {
         return this.Quality;
     }
 
-    //对于有保质期的商品计算quality值
-    public int calculateQuality(int day,int sellIn,int quality) {
-        return this.getQuality();
-    }
+    //计算quality值
+    public abstract int calculateQuality(int day,int sellIn,int quality);
 
-    //对于无保质期的商品计算quality值
-    public int calculateQuality(int day,int quality) {
-        return this.getQuality();
-    }
 }
