@@ -15,6 +15,11 @@ public class CommonCommodity extends Commodity{
             int difference = day - sellIn;
             this.setQuality(quality-sellIn-2*difference);
         }
+        //quality减到0将不再减少
+        if(this.getQuality() <= 0)
+        {
+            return 0;
+        }
         return this.getQuality();
     }
 }
