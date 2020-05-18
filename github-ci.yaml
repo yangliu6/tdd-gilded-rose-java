@@ -1,0 +1,6 @@
+job:
+  # use special keywords
+  only:
+    - tags      # tag 分支 commit 之后触发
+    - triggers  # API 触发
+    - schedules # 每日构建触发
